@@ -6,6 +6,14 @@
   width: 75px;
 }
 
+#timer {
+  font-size: 24px;
+}
+
+#timer span {
+  font-size: 32px;
+}
+
 #equation {
   font-size: 48px;
 }

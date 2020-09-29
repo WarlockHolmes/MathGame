@@ -2,6 +2,10 @@
   border: 2.5px dashed rgba(0, 0, 0, 0.6);
 }
 
+#ui button {
+  width: 75px;
+}
+
 #equation {
   font-size: 48px;
 }
@@ -10,7 +14,7 @@
   width: 75%;
 }
 
-#options label, legend {
+#options label, legend, #score p {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.6)
 }

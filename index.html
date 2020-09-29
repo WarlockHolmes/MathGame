@@ -8,7 +8,7 @@
     <meta name="author" content="Morgan">
     <title>Ten Second Math Game</title>
     <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/underscore-esm-min.js"></script>
+    <script src="js/underscore-min.js"></script>
     <script src="js/application.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,8 +19,12 @@
       <div class="row justify-content-center">
         <div class="col-6 mt-5" id="ui">
           <h1 class="text-center text-black-50">QUICK: MATH!!!</h1>
-          <p class="d-block text-center font-weight-bold my-5" id="equation">1 + 1</p>
-          <input class="d-block mx-auto mb-3" type="text"/>
+          <p class="d-block text-center font-weight-bold my-5" id="equation"></p>
+          <div class="row d-flex justify-content-center mb-3">
+            <input type="text" placeholder="Type your answer here..."/>
+            <button class="btn btn-primary ml-1" id="start">Start!</button>
+            <button class="btn btn-outline-secondary d-none ml-1" id="skip">Skip</button>
+          </div>
           <div class="row" id="options">
             <div class="col-6">
               <label class="d-block mx-auto text-center" for="max">Max number:</label>
@@ -28,18 +32,28 @@
               <p class="d-block text-center mb-3" id="max-value">(number)</p>
             </div>
             <div class="col-6">
-              <form class="d-block">
+              <form class="d-block" id="operators">
                 <legend class="mb-0 text-center">Operators:</legend>
-                <label class="ml-3" for="+">+</label>
-                <input type="checkbox" id="+"/>
-                <label class="ml-3" for="-">-</label>
-                <input type="checkbox" id="-"/>
-                <label class="ml-3" for="*">*</label>
-                <input type="checkbox" id="*"/>
-                <label class="ml-3" for="/">/</label>
-                <input type="checkbox" id="/"/>
+                <label class="ml-3" for="add">+</label>
+                <input type="checkbox" id="add" checked/>
+                <label class="ml-3" for="sub">-</label>
+                <input type="checkbox" id="sub"/>
+                <label class="ml-3" for="mul">*</label>
+                <input type="checkbox" id="mul"/>
+                <label class="ml-3" for="div">/</label>
+                <input type="checkbox" id="div"/>
               </form>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-6 row" id="score">
+          <div class="col-6">
+            <p class="text-center">Current Score: 0</p>
+          </div>
+          <div class="col-6">
+            <p class="text-center">High Score: 0</p>
           </div>
         </div>
       </div>

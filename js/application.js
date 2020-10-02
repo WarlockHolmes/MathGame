@@ -54,7 +54,21 @@ var newEquation = function () {
   var num1 = _.sample(_.range(1, max));
   var num2 = _.sample(_.range(1, max));
   var op = _.sample(operators);
+  var swap;
+  if (op === "-" && num2 > num1) {
+    swap = num1;
+    num1 = num2;
+    num2 = swap;
+  }
+
   correct = eval(num1 + op + num2);
+
+  if (op === "/") {
+    swap = num1*num2;
+    correct = num1;
+    num1 = swap;
+  }
+
   $('#equation').text(num1 + ' ' + op + ' ' + num2);
   $('#ui input:first-child').val('');
 }
